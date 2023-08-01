@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'article', component: ArticleComponent },
   { path: 'about', component: AboutComponent },
   { path: 'content', component: ContentComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
