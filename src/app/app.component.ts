@@ -9,25 +9,13 @@ import { DOCUMENT } from '@angular/common';
 })
 export class AppComponent {
   private iframeId = 'iframeContent';
+  private iframe: HTMLIFrameElement | null = null;
+
   constructor(
     private router: Router,
     private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document
   ) {}
-
-  @HostListener('window: beforeunload')
-  ngOnDestroy() {
-    this.removeIframe();
-  }
-
-  private removeIframe() {
-    const iframe = this.document.getElementById(
-      this.iframeId
-    ) as HTMLIFrameElement;
-    if (iframe) {
-      this.renderer.removeChild(this.document.body, iframe);
-    }
-  }
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
@@ -37,12 +25,16 @@ export class AppComponent {
     });
   }
   private executeAdScript() {
-    this.removeIframe();
+    if (this.iframe) {
+      this.iframe.remove();
+      this.iframe = null;
+    }
 
-    const iframe = this.renderer.createElement('iframe') as HTMLIFrameElement;
-    iframe.id = this.iframeId;
-    iframe.scrolling = 'no';
-    Object.assign(iframe.style, {
+    // 新しい iframe を作成
+    this.iframe = this.renderer.createElement('iframe') as HTMLIFrameElement;
+    this.iframe.id = this.iframeId;
+    this.iframe.scrolling = 'no';
+    Object.assign(this.iframe.style, {
       width: '100%',
       height: '100%',
       position: 'fixed',
@@ -53,8 +45,7 @@ export class AppComponent {
       display: 'none',
     });
 
-    this.renderer.appendChild(this.document.body, iframe);
-
+    this.renderer.appendChild(this.document.body, this.iframe);
     ((window, document) => {
       const createIframe = (insteTag: string) => {
         const html = document.documentElement;
@@ -91,6 +82,7 @@ export class AppComponent {
           html.style.overflow = '';
           body.style.overflow = '';
           iframe.style.display = 'none';
+          iframe.remove();
         });
       };
       createIframe(
