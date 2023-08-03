@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Angular-cli-11.2.14-red)
+![](https://img.shields.io/badge/11.2.14-Angular-DD0031.svg?logo=angular&style=plastic)
 # adserve-angular-spa
 
 ## ディレクトリ構造
