@@ -1,0 +1,23 @@
+<ul>
+  <li>
+    <div>記事1</div>
+  </li>
+  <li>
+    <div>記事2</div>
+  </li>
+  <li>
+    <div>記事3</div>
+  </li>
+</ul>
+
+<ul>
+  <li>
+    <a [routerLink]="['/article']" [queryParams]="{ page: '1' }">page1</a>
+  </li>
+  <li>
+    <a [routerLink]="['/article']" [queryParams]="{ page: '2' }">page2</a>
+  </li>
+  <li>
+    <a [routerLink]="['/article']" [queryParams]="{ page: '3' }">page3</a>
+  </li>
+</ul>
