@@ -60,6 +60,35 @@ adserve-angular-spa
 └── tslint.json
 ```
 
+## これはなにか
+SPAでインターステシャル広告を配信するためのサンプルアプリです。
+
+## なぜこれが必要なのか
+
+## ローカルへのインストール
+```
+git clone https://github.com/reiya-hattori/adserve-angular-spa.git
+npm install
+```
+
+### 起動
+```
+npm start
+OR
+ng serve -o
+```
+
+#### 注意点
+Angular：version 11.2.14 の場合 Nodeのバージョンが14.Xでないと動作しない
+
+## 本番にリリースされるファイルに制約はあるか
+
+## mainへの権限
+
+### mainの保護
+
+## 注意点
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
 
 ## Development server
