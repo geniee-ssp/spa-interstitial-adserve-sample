@@ -17,7 +17,10 @@ export class AppComponent {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.executeAdScript();
+        console.log(event.url);
+        if (!this.isRestrictedPage(event.url)) {
+          this.executeAdScript();
+        }
       }
     });
   }
@@ -66,5 +69,13 @@ export class AppComponent {
           'ript>'
       );
     })(window, document);
+  }
+
+  private isRestrictedPage(url: string): boolean {
+    const restrictedPatterns: RegExp[] = [
+      /^.*\/article\?page=[0-9]+$/,
+    ];
+
+    return restrictedPatterns.some(pattern => pattern.test(url));
   }
 }

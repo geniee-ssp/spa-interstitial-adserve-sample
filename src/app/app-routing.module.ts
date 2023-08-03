@@ -8,6 +8,9 @@ import { ContentComponent } from './content/content.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'article', component: ArticleComponent },
+  { path: 'article/page=1', component: ArticleComponent },
+  { path: 'article/page=2', component: ArticleComponent },
+  { path: 'article/page=3', component: ArticleComponent },
   { path: 'about', component: AboutComponent },
   { path: 'content', component: ContentComponent },
   { path: '**', redirectTo: '' },
