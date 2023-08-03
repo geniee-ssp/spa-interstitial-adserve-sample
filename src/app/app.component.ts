@@ -62,7 +62,7 @@ export class AppComponent {
         });
       };
       createIframe(
-        '<script type="text/javascript" src="https://js.gsspcln.jp/t/466/310/a1466310.js"></sc' +
+        '<script type="text/javascript" src="https://js.gsspcln.jp/t/546/770/a1546770.js"></sc' +
           'ript>'
       );
     })(window, document);
