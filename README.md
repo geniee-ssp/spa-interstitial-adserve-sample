@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/11.2.14-Angular-DD0031.svg?logo=angular&style=plastic)
-![](https://img.shields.io/badge/14.21.3-Node.js-339933.svg?logo=node.js&style=plastic)
+![](https://img.shields.io/badge/~14.21.3-Node.js-339933.svg?logo=node.js&style=plastic)
 # adserve-angular-spa
 
 ## ディレクトリ構造
@@ -64,6 +64,8 @@ adserve-angular-spa
 SPAでインターステシャル広告を配信するためのサンプルアプリです。
 
 ## なぜこれが必要なのか
+SPAでは通常の広告タグが正常に動作しないため。
+そのためSPA媒体用に導入のサンプルを用意する。
 
 ## ローカルへのインストール
 ```
@@ -78,6 +80,8 @@ OR
 ng serve -o
 ```
 
+[localhost:4200](http://localhost:4200/)
+
 #### 注意点
 Angular：version 11.2.14 の場合 Nodeのバージョンが14.Xでないと動作しない
 
@@ -88,29 +92,3 @@ Angular：version 11.2.14 の場合 Nodeのバージョンが14.Xでないと動
 ### mainの保護
 
 ## 注意点
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
