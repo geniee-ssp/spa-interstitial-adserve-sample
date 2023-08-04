@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ArticleComponent } from './article/article.component';
 import { AboutComponent } from './about/about.component';
 import { ContentComponent } from './content/content.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'article/page=3', component: ArticleComponent },
   { path: 'about', component: AboutComponent },
   { path: 'content', component: ContentComponent },
+  { path: 'search', component: SearchComponent },
   { path: '**', redirectTo: '' },
 ];
 

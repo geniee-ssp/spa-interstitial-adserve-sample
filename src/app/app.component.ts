@@ -71,11 +71,19 @@ export class AppComponent {
     })(window, document);
   }
 
-  private isRestrictedPage(url: string): boolean {
+  private isTopPage(url: string) {
+    return url === '/';
+  }
+
+  private isSpecRegExpPage(url: string): boolean {
     const restrictedPatterns: RegExp[] = [
       /^.*\/article\?page=[0-9]+$/,
+      /^.*\/search.*$/,
     ];
-
     return restrictedPatterns.some(pattern => pattern.test(url));
+  }
+
+  private isRestrictedPage(url: string) {
+    return this.isTopPage(url) || this.isSpecRegExpPage(url);
   }
 }
