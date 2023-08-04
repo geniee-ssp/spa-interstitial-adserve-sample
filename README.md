@@ -80,7 +80,7 @@ OR
 ng serve -o
 ```
 
-![localhost:4200](http://localhost:4200/)
+[localhost:4200](http://localhost:4200/)
 
 #### 注意点
 Angular：version 11.2.14 の場合 Nodeのバージョンが14.Xでないと動作しない
