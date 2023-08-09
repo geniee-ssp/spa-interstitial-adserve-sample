@@ -6,24 +6,18 @@ import { Injectable } from '@angular/core';
 export class ServeInstService {
   constructor() {}
 
-  private isTopPage(url: string): boolean {
-    return url === '/';
-  }
-
-  private isSpecRegExpPage(url: string): boolean {
-    const restrictedPatterns: RegExp[] = [
+  public executeAdScript(url: string): void {
+    const RESTRICTED_PATTERNS: RegExp[] = [
       /^.*\/article\?page=[0-9]+$/,
       /^.*\/search.*$/,
     ];
-    return restrictedPatterns.some((pattern) => pattern.test(url));
-  }
-
-  public executeAdScript(): void {
     const FREQUENCY_MINUTES: number = 1;
     const CK_FREQUENCY: string = 'gninstfreq';
-    const isFrequency: boolean =
-      document.cookie.split('; ').indexOf(CK_FREQUENCY + '=' + CK_FREQUENCY) >=
-      0;
+
+    const isTopPage: boolean = url === '/';
+    const isSpecRegExpPage: boolean = RESTRICTED_PATTERNS.some(pattern => pattern.test(url));
+    const isFrequency: boolean = document.cookie.split('; ').indexOf(CK_FREQUENCY + '=' + CK_FREQUENCY) >= 0;
+    const isAdServeRestricted: boolean = isTopPage || isSpecRegExpPage || isFrequency;
 
     const manageFrequencyControl = () => {
       if (isFrequency) return;
@@ -77,15 +71,11 @@ export class ServeInstService {
       });
     };
     manageFrequencyControl();
-    if (!isFrequency) {
+    if (!isAdServeRestricted) {
       createIframe(
         '<script type="text/javascript" src="https://js.gsspcln.jp/t/546/770/a1546770.js"></sc' +
           'ript>'
       );
     }
-  }
-
-  public isRestrictedPage(url: string): boolean {
-    return this.isTopPage(url) || this.isSpecRegExpPage(url);
   }
 }

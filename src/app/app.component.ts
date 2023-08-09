@@ -17,9 +17,7 @@ export class AppComponent {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        if (!this.serveInstService.isRestrictedPage(event.url)) {
-          this.serveInstService.executeAdScript();
-        }
+        this.serveInstService.executeAdScript(event.url);
       }
     });
   }
