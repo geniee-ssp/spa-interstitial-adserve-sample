@@ -70,12 +70,12 @@ export class ServeInstService {
         iframe.remove();
       });
     };
-    manageFrequencyControl();
     if (!isAdServeRestricted) {
       createIframe(
         '<script type="text/javascript" src="https://js.gsspcln.jp/t/546/770/a1546770.js"></sc' +
           'ript>'
       );
+      manageFrequencyControl();
     }
   }
 }
