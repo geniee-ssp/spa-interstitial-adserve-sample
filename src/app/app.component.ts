@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 import { ServeInstService } from './services/serve-inst.service';
@@ -17,7 +17,7 @@ export class AppComponent {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.serveInstService.executeAdScript(event.url);
+        this.serveInstService.executeAdScript(event.url, event.urlAfterRedirects);
       }
     });
   }
