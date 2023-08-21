@@ -39,11 +39,18 @@ adserve-angular-spa
 │   │   │   ├── content.component.html
 │   │   │   ├── content.component.spec.ts
 │   │   │   └── content.component.ts
-│   │   └── home
-│   │       ├── home.component.css
-│   │       ├── home.component.html
-│   │       ├── home.component.spec.ts
-│   │       └── home.component.ts
+│   │   ├── home
+│   │   │   ├── home.component.css
+│   │   │   ├── home.component.html
+│   │   │   ├── home.component.spec.ts
+│   │   │   └── home.component.ts
+│   │   ├── search
+│   │   │   ├── search.component.css
+│   │   │   ├── search.component.html
+│   │   │   ├── search.component.spec.ts
+│   │   │   └── search.component.ts
+│   │   └── services
+│   │       └── serve-inst.service.ts
 │   ├── assets
 │   ├── environments
 │   │   ├── environment.prod.ts
@@ -52,6 +59,7 @@ adserve-angular-spa
 │   ├── index.html
 │   ├── main.ts
 │   ├── polyfills.ts
+│   ├── reset.css
 │   ├── styles.css
 │   └── test.ts
 ├── tsconfig.app.json
