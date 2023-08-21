@@ -17,7 +17,7 @@ export class AppComponent {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.serveInstService.executeAdScript(event.url);
+        this.serveInstService.executeAdScript(event.url, event.urlAfterRedirects);
       }
     });
   }

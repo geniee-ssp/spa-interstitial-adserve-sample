@@ -6,13 +6,13 @@ import { Injectable } from '@angular/core';
 export class ServeInstService {
   constructor() {}
 
-  public executeAdScript(url: string): void {
+  public executeAdScript(url: string, afterUrl: string): void {
     const DIV_ID = '1548501';
     const RESTRICTED_PATTERNS: RegExp[] = [
       /^.*\/article\?page=[0-9]+$/,
       /^.*\/search.*$/,
     ];
-    const FREQUENCY_MINUTES: number = 1;
+    const FREQUENCY_MINUTES: number = 0;
     const CK_FREQUENCY: string = `gninstfreq_${DIV_ID}`;
 
     const isTopPage: boolean = url === '/';
@@ -69,7 +69,7 @@ export class ServeInstService {
         html.style.overflow = '';
         body.style.overflow = '';
         iframe.style.display = 'none';
-        // iframe.remove();
+        iframe.remove();
       });
       manageFrequencyControl();
     };
