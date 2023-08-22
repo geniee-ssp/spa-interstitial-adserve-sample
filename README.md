@@ -100,3 +100,7 @@ Angular：version 11.2.14 の場合 Nodeのバージョンが14.Xでないと動
 ### mainの保護
 
 ## 注意点
+
+## 参考
+既存のプロジェクトに導入するための手順書です。
+https://docs.google.com/document/d/1p65BFvTIRgKdf6n8R3Xq-WEQ8FPRLOA_ep29nNjbizE/edit
