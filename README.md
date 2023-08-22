@@ -13,7 +13,7 @@ SPAでは通常の広告タグが正常に動作しないため、SPAで広告�
 
 #### フリークエンシーコントロールありの場合
 
-![インターステシャル広告・フリークエンシーコントロールあり](https://github.com/reiya-hattori/adserve-angular-spa/assets/135287492/9707afe6-0363-4dda-9c63-3fdf19256747)
+![adserve-angular-spa-on-frequency](https://github.com/reiya-hattori/adserve-angular-spa/assets/135287492/d48c15e2-ef3f-4cbe-8eec-628afcb58212)
 
 ## ローカルへのインストール
 ```
