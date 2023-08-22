@@ -35,21 +35,6 @@ export class ServeInterstitialAdService {
       }
     }
   }
-  /**
-   * isMobile(  )
-   */
-  // private isMobile(): boolean | undefined {
-  //   var a = navigator.userAgentData,
-  //     b = navigator.userAgent;
-  //   return (
-  //     b.includes('iPhone') ||
-  //     b.includes('iPod') ||
-  //     (b.includes('Android') && b.includes('Mobile')) ||
-  //     b.includes('BB10') ||
-  //     b.includes('Windows Phone') ||
-  //     (a && 'Android' === a.platform && a.mobile)
-  //   );
-  // }
 
   /**
    * iframeを作成しその中にインステタグを書き込む

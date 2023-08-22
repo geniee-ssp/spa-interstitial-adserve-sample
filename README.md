@@ -60,9 +60,6 @@ const RESTRICTED_PATTERNS: RegExp[] = [
 const FREQUENCY_MINUTES: number = 0; // 広告の表示間隔を分単位で指定
 ```
 
-#### isMobile
-ユーザーエージェントを利用して、モバイル端末を判定するための関数
-
 #### createInstTagWithIframe
 iframeタグで囲った広告要素をDOMに書き出すための処理を行っている関数
 
