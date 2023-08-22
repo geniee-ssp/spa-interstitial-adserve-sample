@@ -9,7 +9,7 @@ SPAでは通常の広告タグが正常に動作しないため、SPAで広告�
 
 #### フリークエンシーコントロールなしの場合
 
-![インターステシャル広告を配信](https://github.com/reiya-hattori/adserve-angular-spa/assets/135287492/2f47bc56-59ef-4b97-a9b8-87618ec8a4f6)
+![adserve-angular-spa](https://github.com/reiya-hattori/adserve-angular-spa/assets/135287492/18a15a59-6e2e-4ebf-a5e5-dbf811fa2c31)
 
 #### フリークエンシーコントロールありの場合
 
