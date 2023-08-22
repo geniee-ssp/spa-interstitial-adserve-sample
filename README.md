@@ -2,11 +2,13 @@
 ![](https://img.shields.io/badge/~14.21.3-Node.js-339933.svg?logo=node.js&style=plastic)
 # adserve-angular-spa
 
-### フリークエンシーコントロールなしの場合
+#### フリークエンシーコントロールなしの場合
 
 ![インターステシャル広告を配信](https://github.com/reiya-hattori/adserve-angular-spa/assets/135287492/2f47bc56-59ef-4b97-a9b8-87618ec8a4f6)
 
-### フリークエンシーコントロールありの場合
+#### フリークエンシーコントロールありの場合
+
+![インターステシャル広告・フリークエンシーコントロールあり](https://github.com/reiya-hattori/adserve-angular-spa/assets/135287492/9707afe6-0363-4dda-9c63-3fdf19256747)
 
 ## 概要
 SPAでインターステシャル広告を配信するためのサンプルアプリです。(for Angular)
