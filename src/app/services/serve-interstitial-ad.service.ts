@@ -10,7 +10,7 @@ export class ServeInterstitialAdService {
    * インターステシャル広告を配信する
    */
   public executeAdScript(url: string): void {
-    const ZONE_ID: string = '1548501'; // 対象の配信枠のZoneIDを挿入します
+    const ZONE_ID: string = '1466310'; // 対象の配信枠のZoneIDを挿入します
     // 配信しないページを正規表現で指定
     const RESTRICTED_PATTERNS: RegExp[] = [
       /^.*\/article\?page=[0-9]+$/,
