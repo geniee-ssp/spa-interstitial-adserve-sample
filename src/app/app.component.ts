@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
-import { ServeInstService } from './services/serve-inst.service';
+import { ServeInterstitialAdService } from './services/serve-interstitial-ad.service';
 
 @Component({
   selector: 'app-root',
@@ -11,13 +11,13 @@ import { ServeInstService } from './services/serve-inst.service';
 export class AppComponent {
   constructor(
     private router: Router,
-    private serveInstService: ServeInstService
+    private serveInterstitialAdService: ServeInterstitialAdService
   ) {}
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.serveInstService.executeAdScript(event.url, event.urlAfterRedirects);
+        this.serveInterstitialAdService.executeAdScript(event.url);
       }
     });
   }
