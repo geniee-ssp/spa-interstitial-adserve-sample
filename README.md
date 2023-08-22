@@ -49,7 +49,7 @@ Node.jsのバージョン ~ 14で動作します。
 
 アプリケーションに応じて情報を書き換えます。
 ```
-const ZONE_ID = '1466310'; // 対象の配信枠のZoneIDを挿入します
+const ZONE_ID = '1544806'; // 対象の配信枠のZoneIDを挿入します
 
 // 配信しないページを正規表現で指定します
 const RESTRICTED_PATTERNS: RegExp[] = [
