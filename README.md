@@ -11,13 +11,13 @@ SPAでは通常の広告タグが正常に動作しないため、SPAで広告�
 
 TOPページ、ページネーション、検索ページでは配信制限がかかっております。
 
-![adserve-angular-spa](https://github.com/reiya-hattori/adserve-angular-spa/assets/135287492/18a15a59-6e2e-4ebf-a5e5-dbf811fa2c31)
+![adserve-angular-spa](https://github.com/reiya-hattori/adserve-angular-spa/assets/135287492/59b8896c-95ad-4a7c-aded-0d99c4f2d4c8)
 
 #### フリークエンシーコントロールありの場合
 
 TOPページ、ページネーション、検索ページでは配信制限がかかっております。
 
-![adserve-angular-spa-on-frequency](https://github.com/reiya-hattori/adserve-angular-spa/assets/135287492/d48c15e2-ef3f-4cbe-8eec-628afcb58212)
+![adserve-angular-spa-on-frequency](https://github.com/reiya-hattori/adserve-angular-spa/assets/135287492/51331dc0-90e0-4274-bf9b-79b8d0ac1f7a)
 
 ## ローカルへのインストール
 ```
