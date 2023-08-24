@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/11.2.14-Angular-DD0031.svg?logo=angular&style=plastic)
 ![](https://img.shields.io/badge/~14.21.3-Node.js-339933.svg?logo=node.js&style=plastic)
-# adserve-angular-spa
+# spa-interstitial-adserve-sample
 
 ## 概要
 SPAでインターステシャル広告を配信するためのサンプルアプリです。(for Angular)
