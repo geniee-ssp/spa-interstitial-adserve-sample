@@ -20,6 +20,7 @@ TOPページ、ページネーション、検索ページでは配信制限が�
 ![adserve-angular-spa-on-frequency](https://github.com/reiya-hattori/adserve-angular-spa/assets/135287492/51331dc0-90e0-4274-bf9b-79b8d0ac1f7a)
 
 ## ローカルへのインストール
+
 ```
 git clone https://github.com/reiya-hattori/adserve-angular-spa.git
 
@@ -33,12 +34,17 @@ npm start
 Open your browser : [localhost:4200](http://localhost:4200/)
 
 ### 注意点
+
 Node.jsのバージョン ~ 14で動作します。
+
 パッケージ管理ツールなどで所定のバージョンに合わせてから実行してください。（推奨バージョン: 14.21.3）\
+
 当リポジトリではnvmでバージョン管理していますので推奨バージョンを用意の上`nvm use`で切り替えます。
+
 ## 解説
 
 ### 主要な編集ファイル
+
 アプリケーションごとに必要な設定を行うために以下ファイルを編集します。
 - serve-interstitial-ad.service.ts
 - app.component.ts
@@ -46,9 +52,11 @@ Node.jsのバージョン ~ 14で動作します。
 ### [serve-interstitial-ad.service.ts](./src/app/services/serve-interstitial-ad.service.ts)
 
 #### ServeInterstitialAdService
+
 インターステシャル告を書き出すための機能をまとめたサービス関数
 
 #### executeAdScript
+
 広告の配信枠の設定、配信制限ページの設定、フリークエンシーコントロール（フリークエンシーキャップ）の設定を管理して設定した条件に応じて配信制御を実行している関数
 
 アプリケーションに応じて情報を書き換えます。
