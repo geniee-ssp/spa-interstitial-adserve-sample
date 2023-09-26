@@ -22,7 +22,7 @@ TOPページ、ページネーション、検索ページでは配信制限が�
 ## ローカルへのインストール
 
 ```
-git clone https://github.com/reiya-hattori/adserve-angular-spa.git
+git clone https://github.com/geniee-ssp/spa-interstitial-adserve-sample.git
 
 npm install
 
