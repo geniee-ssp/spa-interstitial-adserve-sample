@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class ServeInterstitialAdService {
   constructor() {}
-
   /**
    * インターステシャル広告を配信する
    */
@@ -16,7 +15,7 @@ export class ServeInterstitialAdService {
       /^.*\/article\?page=[0-9]+$/,
       /^.*\/search.*$/,
     ];
-    const FREQUENCY_MINUTES: number = 1; // 広告の表示間隔を分単位で指定
+    const FREQUENCY_MINUTES: number = 0; // 広告の表示間隔を分単位で指定
 
     const CK_FREQUENCY: string = `gninstfreq_${ZONE_ID}`;
     const isTopPage: boolean = url === '/';

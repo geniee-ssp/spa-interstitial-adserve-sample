@@ -11,5 +11,4 @@ export class ArticleComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

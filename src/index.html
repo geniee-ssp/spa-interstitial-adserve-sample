@@ -6,6 +6,16 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Geniee Wrapper Head Tag -->
+    <script>
+      window.gnshbrequest = window.gnshbrequest || {cmd: []};
+      window.gnshbrequest.cmd.push(function() {
+        window.gnshbrequest.preventFirstRun();      // 通常ページ用の自動実行を停止し、componentのライフサイクルに合わせて実行します
+        window.gnshbrequest.forceInternalRequest();
+      });
+    </script>
+    <script async src="https://cpt.geniee.jp/hb/v1/217381/1204/wrapper.min.js"></script>
+    <!-- /Geniee Wrapper Head Tag -->
   </head>
   <body>
     <app-root></app-root>
