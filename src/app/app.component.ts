@@ -17,7 +17,7 @@ export class AppComponent {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.serveInterstitialAdService.executeAdScript(event.url);
+        this.serveInterstitialAdService.executeAdScript(event.id, event.url); // ★第一引数に`event.id`を追加
       }
     });
   }
