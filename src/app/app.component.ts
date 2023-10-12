@@ -32,15 +32,15 @@ export class AppComponent {
         // this.serveInterstitialAdService.executeAdScript(event.url);
       }
     });
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
+    // this.router.events.subscribe((event) => {
+    //   if (event instanceof NavigationEnd) {
         console.log("ngOnInit: コンポーネントの初期化時に実行される・一度のみ実行")
         window.gnshbrequest = window.gnshbrequest || {cmd:[]};
         window.gnshbrequest.cmd.push(function(){
           window.gnshbrequest.applyPassback("1550723", "[data-cptid='1550723']");
         });
-      }
-    });
+    //   }
+    // });
   }
 
   ngDoCheck() {
@@ -82,20 +82,22 @@ export class AppComponent {
     })
   }
 
+  // ページ遷移時のregisterPassbackはココがいい説？
   ngAfterViewInit() {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
+    // this.router.events.subscribe((event) => {
+    //   if (event instanceof NavigationEnd) {
         console.log("ngAfterViewInit: 自分自身と子コンポーネントのビューの初期化時に実行される・一度のみ実行")
       window.gnshbrequest = window.gnshbrequest || {cmd:[]};
         window.gnshbrequest.cmd.push(function(){
           window.gnshbrequest.registerPassback("1550723");
           window.gnshbrequest.rerun();
         });
-      }
-    });
+    //   }
+    // });
 
   }
 
+  // ページ遷移時のapplyPassbackはココがいい説？
   ngAfterViewChecked() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -107,7 +109,6 @@ export class AppComponent {
         });
       }
     })
-
   }
 
   ngOnDestroy() {
