@@ -19,18 +19,28 @@ export class ServeInterstitialAdService {
 
     const CK_FREQUENCY: string = `gninstfreq_${ZONE_ID}`;
     const isTopPage: boolean = url === '/';
-    const isSpecRegExpPage: boolean = RESTRICTED_PATTERNS.some(pattern => pattern.test(url));
-    const isFrequency: boolean = document.cookie.split('; ').indexOf(CK_FREQUENCY + '=' + CK_FREQUENCY) >= 0;
-    const isAdServeRestricted: boolean = isTopPage || isSpecRegExpPage || isFrequency;
+    const isSpecRegExpPage: boolean = RESTRICTED_PATTERNS.some((pattern) =>
+      pattern.test(url)
+    );
+    const isFrequency: boolean =
+      document.cookie.split('; ').indexOf(CK_FREQUENCY + '=' + CK_FREQUENCY) >=
+      0;
+    const isAdServeRestricted: boolean =
+      isTopPage || isSpecRegExpPage || isFrequency;
 
     if (!isAdServeRestricted) {
       this.createInstTagWithIframe(ZONE_ID);
 
       // フリコン制御のためのクッキーを更新
       if (!isFrequency) {
-        const now:Date = new Date();
+        const now: Date = new Date();
         now.setMinutes(now.getMinutes() + FREQUENCY_MINUTES);
-        document.cookie = CK_FREQUENCY + '=' + CK_FREQUENCY + '; path=/; expires=' + now.toUTCString();
+        document.cookie =
+          CK_FREQUENCY +
+          '=' +
+          CK_FREQUENCY +
+          '; path=/; expires=' +
+          now.toUTCString();
       }
     }
   }
@@ -44,6 +54,9 @@ export class ServeInterstitialAdService {
     const iframe = document.createElement('iframe');
     const style =
       'width: 100%;height: 100%;position: fixed;top: 0;left: 0;border: 0;z-index: 2147483647;';
+    const adsInitStyleTag =
+      '<style data-gn-init-style>#gn_interstitial_close_icon{opacity: 0; visibility: hidden; pointer-events: none;}</style>';
+    const failsafeScript = '<script>((window, document) => {setTimeout(() => {const gnInstStyle = document.head.querySelector("[data-gn-init-style]");if (!gnInstStyle) return;gnInstStyle.remove();}, 5000)})(window, document);</script>';
     const lastThreeNum = divId.slice(-3);
     const beforeLastThreeNum = divId.slice(-6, -3);
     const src = `https://js.gsspcln.jp/t/${beforeLastThreeNum}/${lastThreeNum}/a${divId}.js`;
@@ -52,7 +65,6 @@ export class ServeInterstitialAdService {
     body.style.overflow = 'hidden';
     body.prepend(iframe);
     iframe.setAttribute('id', 'iframeContent');
-    // iframe.scrolling = 'no';
     iframe.setAttribute('style', style);
     const iframeContent = document.getElementById(
       'iframeContent'
@@ -61,7 +73,7 @@ export class ServeInterstitialAdService {
     const iframeContentDoc = iframeContent.contentWindow.document;
     iframeContentDoc.open();
     iframeContentDoc.write(
-      '<html><head></head><body style="margin:0;padding:0;"><script type="text/javascript" src="' + src + '"></script></body></html>'
+      '<html><head>' + adsInitStyleTag + '</head><body style="margin:0;padding:0;"><script type="text/javascript" src="' + src + '"></script>' + failsafeScript + '</body></html>'
     );
     iframeContentDoc.close();
     iframeContentDoc.addEventListener('click', (event: MouseEvent) => {
@@ -73,5 +85,5 @@ export class ServeInterstitialAdService {
       iframe.style.display = 'none';
       iframe.remove();
     });
-  };
+  }
 }

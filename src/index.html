@@ -14,10 +14,21 @@
         window.gnshbrequest.forceInternalRequest();
       });
     </script>
-    <script async src="https://cpt.geniee.jp/hb/v1/217381/1204/wrapper.min.js"></script>
+    <script async src="https://cpt.geniee.jp/hb/v1/157826/988/wrapper.min.js"></script>
     <!-- /Geniee Wrapper Head Tag -->
   </head>
   <body>
     <app-root></app-root>
   </body>
 </html>
+
+
+<script>
+  ((window, document) => {
+    setTimeout(() => {
+      const gnInstStyle = document.head.querySelector("[data-gn-init-style]");
+      if (!gnInstStyle) return;
+      gnInitStyle.remove();
+    }, 7000);
+  })(window, document);
+</script>

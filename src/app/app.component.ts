@@ -17,7 +17,7 @@ export class AppComponent {
     // @ts-ignore
     window.gnshbrequest = window.gnshbrequest || {cmd:[]};
     window.gnshbrequest.cmd.push(function(){
-      window.gnshbrequest.registerPassback("1550723");
+      window.gnshbrequest.registerPassback("1545288");
       window.gnshbrequest.rerun();
     });
   }
@@ -29,7 +29,7 @@ export class AppComponent {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        // this.serveInterstitialAdService.executeAdScript(event.url);
+        this.serveInterstitialAdService.executeAdScript(event.url);
       }
     });
     // this.router.events.subscribe((event) => {
@@ -37,7 +37,7 @@ export class AppComponent {
         console.log("ngOnInit: コンポーネントの初期化時に実行される・一度のみ実行")
         window.gnshbrequest = window.gnshbrequest || {cmd:[]};
         window.gnshbrequest.cmd.push(function(){
-          window.gnshbrequest.applyPassback("1550723", "[data-cptid='1550723']");
+          window.gnshbrequest.applyPassback("1545288", "[data-cptid='1545288']");
         });
     //   }
     // });
@@ -49,7 +49,7 @@ export class AppComponent {
         console.log("ngDoCheck: コンポーネントの状態が変わったことを検知したら実行される")
         // window.gnshbrequest = window.gnshbrequest || {cmd:[]};
         // window.gnshbrequest.cmd.push(function(){
-        //   window.gnshbrequest.registerPassback("1550723");
+        //   window.gnshbrequest.registerPassback("1545288");
         //   window.gnshbrequest.rerun();
         // });
       }
@@ -62,7 +62,7 @@ export class AppComponent {
       console.log("ngAfterContentInit: 外部コンテンツを初期化したときに実行される・一度のみ実行")
       // window.gnshbrequest = window.gnshbrequest || {cmd:[]};
       //   window.gnshbrequest.cmd.push(function(){
-      //     window.gnshbrequest.registerPassback("1550723");
+      //     window.gnshbrequest.registerPassback("1545288");
       //     window.gnshbrequest.rerun();
       //   });
       }
@@ -76,7 +76,7 @@ export class AppComponent {
         console.log("ngAfterContentChecked: 外部コンテンツの変更を検知したときに実行される")  
           // window.gnshbrequest = window.gnshbrequest || {cmd:[]};
           // window.gnshbrequest.cmd.push(function(){
-          //   window.gnshbrequest.applyPassback("1550723", "[data-cptid='1550723']");
+          //   window.gnshbrequest.applyPassback("1545288", "[data-cptid='1545288']");
           // });
       }
     })
@@ -89,7 +89,7 @@ export class AppComponent {
         console.log("ngAfterViewInit: 自分自身と子コンポーネントのビューの初期化時に実行される・一度のみ実行")
       window.gnshbrequest = window.gnshbrequest || {cmd:[]};
         window.gnshbrequest.cmd.push(function(){
-          window.gnshbrequest.registerPassback("1550723");
+          window.gnshbrequest.registerPassback("1545288");
           window.gnshbrequest.rerun();
         });
     //   }
@@ -105,7 +105,7 @@ export class AppComponent {
         console.log("=============================================================================")
         window.gnshbrequest = window.gnshbrequest || {cmd:[]};
         window.gnshbrequest.cmd.push(function(){
-          window.gnshbrequest.applyPassback("1550723", "[data-cptid='1550723']");
+          window.gnshbrequest.applyPassback("1545288", "[data-cptid='1545288']");
         });
       }
     })
